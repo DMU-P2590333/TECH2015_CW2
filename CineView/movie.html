@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>CineView</title>
+  </head>
+  <body>
+
+    <div id="myMenu" class="menu">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <a href="index.html">Home</a>
+     <a href="movie.html">Movies</a>
+     <a href="gen.html">Movie Generator</a>
+     <a href="contact.html">Contact</a>
+    </div>
+    <span onclick="openNav()"><img class="button" src="img/button.png" alt="Menu"></span>
+<a href="index.html"><img class="header" src="img/filmreel.png" alt="Header"></a>
+
+    <h2>Movies</h2>
+<!--A filter system was created using code found at https://stackoverflow.com/questions/16082424/how-to-filter-images-by-class-using-drop-down-box
+  filters were included within this page to increase user experience as it will allow them to filter movies by their desired genre, minimalising the list
+  given. By using classes the buttons can hide the elements that do not apply to that class element-->
+    <div class="BtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">Show All</button>
+      <button class="btn" onclick="filterSelection('action')">Action</button>
+      <button class="btn" onclick="filterSelection('comedy')">Comedy</button>
+      <button class="btn" onclick="filterSelection('history')">History</button>
+      <button class="btn" onclick="filterSelection('horror')">Horror</button>
+      <button class="btn" onclick="filterSelection('scifi')">SciFi</button>
+    </div>
+    <!--Each div contains the movie thumnail, the movie title, ratings (other website and the original webiste), the director, synopsis and trailer, allowing the user to
+      recieve a handful of different information that could alter their impression of the film. This code was repeated for each movie.-->
+<div class="container">
+  <!--The thumbnail acts as a button that will display and hide the information. This keeps the overall page design simple, ensuring the user isn't bombarded with information.
+    This creates a smoother design of the overall page-->
+
+  <div class="filterDiv history action"><img onclick="myFunction0()" class="thumbnail" src="img/war.jpg" alt="1917"></div>
+  <div id="myDiv0">
+    <h2>1917</h2>
+    <p>IMBd: 8.2/10 Rotten Tomatoes: 88 </p>
+    <p>Run Time: 1hr 59mins</p>
+    <p>Director: Sam Mendes</p>
+    <p>Synopsis: Two soldiers, assigned the task of delivering a critical message to another battalion, risk their lives for the job in order to prevent them from stepping right into a deadly ambush.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+    <!--It was decided that the trailer would be embedded from YouTube instead of uploading them was to reduce the overall size of the page, there is a lot of information
+      on this page and having multiple versions of each clip (to ensure all users have access) will ultimately decrease the webpages speed-->
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/YqNYrYUiMfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv scifi"><img onclick="myFunction1()" class="thumbnail" src="img/future.jpg" alt="Back To The Future"></div>
+  <div id="myDiv1">
+    <h2>Back To The Future</h2>
+    <p>IMBd: 8.5/10 Rotten Tomatoes: 96  </p>
+    <p>Run Time: 1hr 56mins</p>
+    <p>Director: Robertemeckis</p>
+    <p>Synopsis:Marty travels back in time using an eccentric scientist's time machine. However, he must make his high-school-aged parents fall in love in order to return to the present.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9733;&#11240;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/qvsgGtivCgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv action"><img onclick="myFunction2()" class="thumbnail" src="img/widow.jpg" alt="Black Widow"></div>
+  <div id="myDiv2">
+    <h2>Black Widow</h2>
+    <p>IMBd: 6.7/10 Rotten Tomatoes: 79 </p>
+    <p>Run Time: 2hr 13mins</p>
+    <p>Director: Cate Shortland</p>
+    <p>Synopsis: Natasha Romanoff, a former KGB spy, is shocked to find out that her ex handler, General Dreykov, is still alive. While evading capture by Taskmaster, she is forced to confront her dark past.</p>
+    <h3>Our Rating: &#9734;&#9734;&#9733;&#9733;&#9733;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/ybji16u608U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv history"><img onclick="myFunction3()" class="thumbnail" src="img/queen.jpg" alt="Bohemiam Rhapsody"></div>
+  <div id="myDiv3">
+    <h2>Bohemiam Rhapsody</h2>
+    <p>IMBd: 7.9/10 Rotten Tomatoes: 60 </p>
+    <p>Run Time: 2hr 14mins</p>
+    <p>Director: Bryan Singer, Dexter Fletcher</p>
+    <p>Synopsis: With his impeccable vocal abilities, Freddie Mercury and his rock band, Queen, achieve superstardom. However, amidst his skyrocketing success, he grapples with his ego, sexuality and a fatal illness.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9733;&#11240;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/mP0VHJYFOAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv history action"><img onclick="myFunction4()" class="thumbnail" src="img/dunkirk.jpg" alt="Dunkirk"></div>
+  <div id="myDiv4">
+    <h2>Dunkirk</h2>
+    <p>IMBd: 7.8/10 Rotten Tomatoes: 92 </p>
+    <p>Run Time: 1hr 46mins</p>
+    <p>Director: Christopher Nolan</p>
+    <p>Synopsis: During World War II, soldiers from the British Empire, Belgium and France try to evacuate from the town of Dunkirk during a arduous battle with German forces.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#11240;&#9734</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/T7O7BtBnsG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv action"><img onclick="myFunction5()" class="thumbnail" src="img/fast.jpg" alt="Fast and Furious"></div>
+  <div id="myDiv5">
+    <h2>Fast and Furious</h2>
+    <p>IMBd: 6.8/10 Rotten Tomatoes: 54 </p>
+    <p>Run Time: 1hr 46mins</p>
+    <p>Director: Rob Cohen</p>
+    <p>Synopsis: A spate of high-speed robberies in LA brings street racer Dominic Toretto and his crew under the LAPD scanner. FBI agent Brian goes undercover and befriends Toretto in a bid to investigate the matter.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#11240;&#9733;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/2TAOizOnNPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv comedy"><img onclick="myFunction6()" class="thumbnail" src="img/flushedaway.jpg" alt="Flushed Away"></div>
+  <div id="myDiv6">
+    <h2>Flushed Away</h2>
+    <p>IMBd: 6.6/10 Rotten Tomatoes: 73 </p>
+    <p>Run Time: 1hr 26mins</p>
+    <p>Director: David Bowers, Sam Fell</p>
+    <p>Synopsis: Roddy, a rat, lives a luxurious lifestyle in a furnished flat. However, life has other plans for him after he gets flushed from a toilet into the sewers of London, where a new beginning awaits him.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/YIwja07VVg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv scifi"><img onclick="myFunction7()" class="thumbnail" src="img/inception.jpg" alt="Inception"></div>
+  <div id="myDiv7">
+    <h2>Inception</h2>
+    <p>IMBd: 8.8/10 Rotten Tomatoes: 87 </p>
+    <p>Run Time: 2hr 28mins</p>
+    <p>Director: Christopher Nolan</p>
+    <p>Synopsis: Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb's criminal history as payment for performing an inception on his sick competitor's son.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9733;&#11240;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/YoHD9XEInc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="filterDiv action"><img onclick="myFunction8()" class="thumbnail" src="img/indiana.jpg" alt="Indiana Jones"></div>
+  <div id="myDiv8">
+    <h2>Indiana Jones And The Kingdom Of The Crystal Skull</h2>
+    <p>IMBd: 6.1/10 Rotten Tomatoes: 78 </p>
+    <p>Run Time: 2hr 2mins</p>
+    <p>Director: Steven Spielberg</p>
+    <p>Synopsis: Indiana Jones, a renowned archaeologist and explorer, teams up with a young man, Mutt Williams, in order to unearth the mystery behind the legendary crystal skulls.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/WAdJf4wTC5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  <div class="filterDiv action"><img onclick="myFunction9()" class="thumbnail" src="img/intime.jpg" alt="In Time"></div>
+  <div id="myDiv9">
+    <h2>In Time</h2>
+    <p>IMBd: 6.7/10 Rotten Tomatoes: 37 </p>
+    <p>Run Time: 1hr 49mins</p>
+    <p>Director: Andrew Niccol</p>
+    <p>Synopsis: In a future where people stop ageing after 25 and need to buy time to live, the rich become immortal while others cease to exist. So, Will is on the run with a hostage in a desperate bid to survive.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9734;&#9734;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/YRSBiTF3wNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  <div class="filterDiv scifi"><img onclick="myFunction10()" class="thumbnail" src="img/irobot.jpg" alt="iRobot"></div>
+  <div id="myDiv10">
+    <h2>iRobot</h2>
+    <p>IMBd: 7.1/10 Rotten Tomatoes: 56 </p>
+    <p>Run Time: 1hr 55mins</p>
+    <p>Director: Alex Proya</p>
+    <p>Synopsis: Del Spooner investigates the murder of Dr Alfred, who works at US Robotics, with the help of a robopsychologist. He tries to deduce if a robot has violated the laws of robotics and killed him.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9734;&#9734;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/7Dlo-VB0-HI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  <div class="filterDiv drama"><img onclick="myFunction11()" class="thumbnail" src="img/joker.jpg" alt="Joker"></div>
+  <div id="myDiv11">
+    <h2>Joker</h2>
+    <p>IMBd: 8.4/10 Rotten Tomatoes: 68 </p>
+    <p>Run Time: 2hr 2mins</p>
+    <p>Director: Todd Phillips</p>
+    <p>Synopsis: Arthur Fleck, a party clown, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak, he decides to embrace the life of crime and chaos.</p>
+    <h3>Our Rating: &#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+    <iframe width="350" height="240" src="https://www.youtube.com/embed/zAGVQLHvwOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+</div>
+<!--Any information that was sourced was mentioned within the footer-->
+<footer>P2590333 CineView 2022&copy; All synopsis sourced from Google&copy; All videos sourced from YouTube&copy; links found in html</footer>
+
+    <script>
+      function openNav() {
+        document.getElementById("myMenu").style.width = "100vw";
+      }
+      function closeNav() {
+        document.getElementById("myMenu").style.width = "0";
+      }
+    //This piece of javascript allow the filter buttons to hide and display the appropriate thumbnails through the class names
+      filterSelection("all")
+      function filterSelection(c){
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c =="all") c = "";
+        for (i = 0; i < x.length; i++){
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c)>-1) w3AddClass(x[i], "show");
+        }
+      }
+      function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+$(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});
+//This javascript activates the thumnails to present as buttons to hide and display the hidden information when required. This was found in the same
+//wesbite as the code above but was switched around to work for the websites needs. It had to be repeated for each individual div to ensure they only
+//open the information that relates to the image otherwise each button will display all the information for each film. This isn't the desired effect.
+function myFunction0() {
+  var x = document.getElementById("myDiv0");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction1() {
+  var x = document.getElementById("myDiv1");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction2() {
+  var x = document.getElementById("myDiv2");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction3() {
+  var x = document.getElementById("myDiv3");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction4() {
+  var x = document.getElementById("myDiv4");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction5() {
+  var x = document.getElementById("myDiv5");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction6() {
+  var x = document.getElementById("myDiv6");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction7() {
+  var x = document.getElementById("myDiv7");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction8() {
+  var x = document.getElementById("myDiv8");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction9() {
+  var x = document.getElementById("myDiv9");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+function myFunction10() {
+  var x = document.getElementById("myDiv10");
+  if (x.style.display === "block"){
+    x.style.display = "none";
+  } else{
+    x.style.display = "block";
+  }
+}
+
+    </script>
+  </body>
+</html>

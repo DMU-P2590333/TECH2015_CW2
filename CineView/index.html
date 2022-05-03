@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--This code allows the webpage to resize the page appropriately to any devices resolution-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To ensure that the browser correctly style the wepbage by connecting this page to the css styling page-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>CineView</title>
+
+  </head>
+  <body>
+    <!--A navigation menu was created for user accessibility to be able to navigate through the website with ease-->
+    <div id="myMenu" class="menu">
+    <!--Link elements are used to create the navigation menu, linking them to the other pages-->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="movie.html">Movies</a>
+    <a href="gen.html">Generate a Movie</a>
+    <a href="contact.html">Contact</a>
+    </div>
+    <!--This button allows the user to open the navigation menu-->
+    <span onclick="openNav()"><img class="button" src="img/button.png" alt="Menu"></span>
+    <a href="index.html"><img class="header" src="img/filmreel.png" alt="Header"></a>
+
+    <!--At the top of the page, a small paragraph introduces the user to the website.-->
+    <h2>Hi!</h2>
+    <p class="welcome">Welcome to CineView! The website that will allow you to stay up to date with
+    film news, will offer a helping hand when you're not sure what to watch and to get
+    you involved in the community of like minded film buffs!</p>
+    <p>For over 100 years movies have been a staple in our every day lives.</p>
+    <h2>Coming Soon</h2>
+    <p>Click the movie poster to watch the trailer!</p>
+    <!--An automatic image carousel was ideal for this coming soon feature as it would display a number of different film posters
+      to the user and allow them to click each one individually. *This code was sourced from https://designshack.net/articles/css/infinitephotobanner/ *
+      This was chosen over an automatic slideshow as it was wanting to appear as a continous stream, like an old camera film, and this effect could not
+      be created using the slideshow.-->
+    <div class="comingsoon">
+      <img id="first" class="img" src="img/coming.jpg" alt="Coming Soon">
+      <a href="https://www.youtube.com/watch?v=9ix7TUGVYIo"><img class="img" src="img/matrix.jpg" alt="The Matrix Ressurections"></a>
+      <a href="https://www.youtube.com/watch?v=3UgJL23HxyU"><img class="img" src="img/outfit.jpg" alt="The Outfit"></a>
+      <a href="https://www.youtube.com/watch?v=oZ6iiRrz1SY"><img class="img" src="img/morbius.jpg" alt="Morbius"></a>
+      <a href="https://www.youtube.com/watch?v=Y9dr2zw-TXQ"><img class="img" src="img/dumbledore.jpg" alt="The Secrets of Dumbledore"></a>
+      <img class="img" src="img/coming.jpg" alt="Coming Soon">
+      <a href="https://www.youtube.com/watch?v=9ix7TUGVYIo"><img class="img" src="img/matrix.jpg" alt="The Matrix Ressurections"></a>
+      <a href="https://www.youtube.com/watch?v=3UgJL23HxyU"><img class="img" src="img/outfit.jpg" alt="The Outfit"></a>
+      <a href="https://www.youtube.com/watch?v=oZ6iiRrz1SY"><img class="img" src="img/morbius.jpg" alt="Morbius"></a>
+      <a href="https://www.youtube.com/watch?v=Y9dr2zw-TXQ"><img class="img" src="img/dumbledore.jpg" alt="The Secrets of Dumbledore"></a>
+      </div>
+
+      <!--Originally an iframe of the IMDb top films was to be included in this section, however due to copyright and cookies, it was unable to be used.
+        The second best option was to embed a social media post from IMDb that relates on a similar level.-->
+      <h2>IMDb's Top Movies Last Year</h2>
+<iframe class="post" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fimdb%2Fphotos%2Fa.355387383948%2F10160264671868949%2F%3Ftype%3D3&show_text=false&width=500" width="500" height="498" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+<!--In the original design, a forum was created on a seperate page, however this was tricky to accomplish, so a similar concept was included on the home page.
+  A number of fake responses were placed at the bottom of the home page to create a conversation for users-->
+<h2>User News</h2>
+<p>We post your updates here on our homepage! Have a read and get involved.</p>
+<!--Each response was placed into a seperate <p> element with a class that will add the styling techniques to all three seperately. This seperating each reponse.-->
+<p class="boxs">"Signs (2002) is the best alien movie I have ever seen (it made me puke from fear when I was a kid)" - Daniel Loss</p>
+<p class="boxs">"I would give them 20 years before they start having thoughts about re-doing franchises like the Lord of the Rings films or the Harry Potter films. When they feel like they need to "breed new fans" even at the expense of confusing the hell out of the chronological releases and potentially chance of confusing the source material even more." - Sam Wright</p>
+<p class="boxs">"The two of my most favorite movies are The Groundhog Day and My Cousin Vinny. What do these two have in common apart from being light-hearted comedies? Southern Accent. I love the accent! My Cousin Vinney had this opposition lawyer who had a southern accent and in the movie Groundhog Day it was Andie McDowell who I think had a slight Southern accent." - Daniel Mishy</p>
+
+<h3>Submit your comments here!</h3>
+<h6>Don't worry! Your email remains confidential</h6>
+<!--A form was created using the <form> element that W3schools.com suggested.-->
+<form action="mailto:P2590333@my365.dmu.ac.uk" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="40"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+
+<!--A footer is added at the bottom of the page, this often includes information such as copyrights.-->
+<footer>P2590333 CineView 2022&copy; </footer>
+
+<!--Javascript is a coding language to make the page interactive in one way or another, it works
+different to the html and CSS languages as they give structure instead of interactive elements-->
+  <script>
+    //This piece of javascript allows the navigation menu to animate. Sources from W3schools.com
+    function openNav() {
+        document.getElementById("myMenu").style.width = "100%";
+      }
+      function closeNav() {
+        document.getElementById("myMenu").style.width = "0";
+      }
+  </script>
+  </body>
+</html>

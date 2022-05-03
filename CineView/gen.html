@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>CineView</title>
+  </head>
+  <body>
+
+        <div id="myMenu" class="menu">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="index.html">Home</a>
+         <a href="movie.html">Movies</a>
+         <a href="gen.html">Movie Generator</a>
+         <a href="contact.html">Contact</a>
+        </div>
+        <span onclick="openNav()"><img class="button" src="img/button.png" alt="Menu"></span>
+    <a href="index.html"><img class="header" src="img/filmreel.png" alt="Header"></a>
+
+    <h2>Movie Generator</h2>
+    <p>Can't decide what to watch? Use our generator to pick a random film from our Top Picks!
+    Just click the button below and start watching!</p>
+
+    <!--Creating a movie generator was important as it was one of the main aspects of the original site design. It would allow
+      the user to click a button to randomly display an image. The original code was a more efficient way and the page loaded much
+      faster, however due to it working through arrays within javascript, the browser couldn't differenciate the random images with
+      the images already on the screen. Meaning it would remove the header and menu button on click. This was useless as it wouldn't
+      allow the user to continue through the site. To change this a random div element was created instead using code from
+      https://reddit.fun/184045/box-that-displays-random-divs this worked much better however it makes the page load incredibly slowly.-->
+    <div id="box">
+
+    <!--This element will display a button to the user that allows the website to display a random div-->
+      <div id="buttonDiv">
+        <button id="buttonShuffle">Random Movie</button>
+      </div>
+
+      <!--Each div (that would be randomly selected) would contain the movie poster, the name and an embeded youtube video of a
+        favourite clip of the film. Each div is placed within the same class to allow the javascript to recognise the required information-->
+        <div class="image">
+          <img src="img/batman.jpg" alt="">
+          <h3>The Batman</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/iA_wCcG-dQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/split.jpg" alt="">
+          <h3>Split</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/FnFMS11g4fM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/hungergames.jpg" alt="">
+          <h3>The Hunger Games</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/G9VI6SExDms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/dunkirk.jpg" alt="">
+          <h3>Dunkirk</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/bgS0GPQhzHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/chocolat.jpg" alt="">
+          <h3>Chocolat</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/PhkCGApLP30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/fast.jpg" alt="">
+          <h3>Fast and Furious</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/0IXg-9tKZek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/flushedaway.jpg" alt="">
+          <h3>Flushed Away</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/m3XsVwEuULw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/future.jpg" alt="">
+          <h3>Back To The Future</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/T_WSXXPQYeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/holygrail.jpg" alt="">
+          <h3>Monty Python and The Holy Grail</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/QSo0duY7-9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/inception.jpg" alt="">
+          <h3>Inception</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/i3-jlhJgU9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/indiana.jpg" alt="">
+          <h3>Indiana Jones</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/assxBG_aS3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/intime.jpg" alt="">
+          <h3>In Time</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/7DqqSsFWcHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/irobot.jpg" alt="">
+          <h3>iRobot</h3>
+          <p>Our favourite scene</p>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/nShgPJpdocQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="image">
+          <img src="img/joker.jpg" alt="">
+          <h3>Joker</h3>
+          <p>Our favourite scene</p>
+            <h6>Scene might be difficult for some viewers. Viewer Descrection advised</h6>
+          <iframe width="350" height="240" src="https://www.youtube.com/embed/JeyVU4nMWCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <footer>P2590333 CineView 2022&copy; All videos sourced from YouTube&copy; links found in html</footer>
+    <script>
+      function openNav() {
+        document.getElementById("myMenu").style.width = "100vw";
+      }
+      function closeNav() {
+        document.getElementById("myMenu").style.width = "0";
+      }
+
+      //This is the javascript suggested with the html from https://reddit.fun/184045/box-that-displays-random-divs
+      //this tells the browser to randomly pick a <div> element from the listed above using a class name and display it
+      //on the website
+      var texts = document.getElementsByClassName('image'),
+          randomNumber;
+
+      function updateNumber(){
+         randomNumber = (Math.floor((Math.random() * texts.length) + 1)) - 1;
+      }
+
+      function updateText(){
+      	updateNumber();
+        for (i = 0; i < texts.length; i++) {
+          texts[i].style.display = "none";
+        }
+        texts[randomNumber].style.display = "block";
+      }
+
+      window.onload = function(){
+      	updateText();
+      }
+
+      document.getElementById('buttonShuffle').onclick = function(){
+      	updateText();
+      }
+
+
+    </script>
+  </body>
+</html>
